@@ -41,15 +41,19 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
     setIsSubmitting(true);
     
     try {
-      await submitContactForm(formData);
-      setSubmitted(true);
-      setTimeout(() => {
-        onClose();
-        setSubmitted(false);
-        setFormData({ name: '', email: '', location: '', website: '' });
-      }, 2000);
+      const result = await submitContactForm(formData);
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          onClose();
+          setSubmitted(false);
+          setFormData({ name: '', email: '', location: '', website: '' });
+        }, 2500);
+      } else {
+        setError(result.message || 'Failed to submit form. Please try again.');
+      }
     } catch (err) {
-      setError('Failed to submit form. Please try again.');
+      setError(err.message || 'Failed to submit form. Please try again or email us directly at askdd@ddconsult.tech');
     } finally {
       setIsSubmitting(false);
     }
