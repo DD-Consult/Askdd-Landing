@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Brain, FileText, Workflow, Settings, BarChart3 } from 'lucide-react';
+import { MessageSquare, Brain, Workflow, Settings, BarChart3 } from 'lucide-react';
 
 export const FeaturesSection = () => {
   const features = [
@@ -14,11 +14,6 @@ export const FeaturesSection = () => {
       description: 'Qualify and educate leads through intelligent, conversational interactions'
     },
     {
-      icon: FileText,
-      title: 'Automated Proposals',
-      description: 'Instantly generate and send personalized PDF proposals to qualified leads'
-    },
-    {
       icon: Workflow,
       title: 'Workflow Automation',
       description: 'Connect seamlessly to your email lists and CRM via Make.com or N8N'
@@ -27,17 +22,12 @@ export const FeaturesSection = () => {
       icon: Settings,
       title: 'Full Customization',
       description: 'Customize branding, messaging, and behavior through the client admin portal'
-    },
-    {
-      icon: BarChart3,
-      title: 'Live Analytics Dashboard',
-      description: 'Track conversations, conversions, and popular questions in real-time'
     }
   ];
 
   return (
     <section id="features" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="heading-2 mb-4">Powerful Features for Growth</h2>
           <p className="body-large" style={{ color: 'var(--text-secondary)' }}>
@@ -45,7 +35,7 @@ export const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
             <div 
               key={index}
@@ -60,6 +50,53 @@ export const FeaturesSection = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Highlighted Features with Visuals */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20">
+          {/* Live Analytics Dashboard */}
+          <div className="feature-highlight">
+            <div className="mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="feature-icon-wrapper-small">
+                  <BarChart3 size={24} style={{ color: 'white' }} />
+                </div>
+                <h3 className="heading-3">Live Analytics Dashboard</h3>
+              </div>
+              <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
+                Track conversations, conversions, and popular questions in real-time. Get actionable insights to optimize your customer engagement.
+              </p>
+            </div>
+            <div className="analytics-showcase">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_ai-sales-agent-8/artifacts/d36ig3tm_analytics%20screenshot.png"
+                alt="Ask DD Analytics Dashboard"
+                className="w-full rounded-xl shadow-2xl border border-[var(--border-light)]"
+              />
+            </div>
+          </div>
+
+          {/* Customization Demo */}
+          <div className="feature-highlight">
+            <div className="mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="feature-icon-wrapper-small">
+                  <Settings size={24} style={{ color: 'white' }} />
+                </div>
+                <h3 className="heading-3">Fully Customizable</h3>
+              </div>
+              <p className="body-medium mb-4" style={{ color: 'var(--text-secondary)' }}>
+                Match your brand perfectly. Customize colors, sizes, messages, and behavior to create the perfect experience for your customers.
+              </p>
+            </div>
+            <div className="customization-demo">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_33a0d074-936c-4861-b14b-10f50673f9e6/artifacts/pf9fjkf3_customisations%20screenshot.png"
+                alt="Ask DD Customization Options"
+                className="w-full rounded-xl shadow-2xl border border-[var(--border-light)]"
+              />
+            </div>
+          </div>
         </div>
         
         {/* Easy Integration Callout */}
@@ -105,6 +142,37 @@ const styles = `
   justify-content: center;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+.feature-icon-wrapper-small {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-button);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+.feature-highlight {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.feature-highlight:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-primary);
+}
+
+.analytics-showcase,
+.customization-demo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
 `;
 

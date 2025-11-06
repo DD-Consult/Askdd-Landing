@@ -5,13 +5,6 @@ export const HeroSection = ({ onBookDemo }) => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--accent-wash)] rounded-full mb-6">
-          <div className="w-2 h-2 bg-[var(--accent-primary)] rounded-full animate-pulse"></div>
-          <span className="text-sm font-medium" style={{ color: 'var(--accent-primary)' }}>
-            Your 24/7 Digital Sales Agent
-          </span>
-        </div>
-        
         <h1 className="heading-1 mb-6">
           Meet Ask DD: Your 24/7 AI Sales Agent
         </h1>
@@ -40,7 +33,7 @@ export const HeroSection = ({ onBookDemo }) => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 pointer-events-none"></div>
             <img 
-              src="https://customer-assets.emergentagent.com/job_33a0d074-936c-4861-b14b-10f50673f9e6/artifacts/vhme21ro_chatbot%20image.png"
+              src="https://customer-assets.emergentagent.com/job_ai-sales-agent-8/artifacts/px382ouq_chatbot%20response%20image.png"
               alt="Ask DD Chatbot Interface"
               className="w-full rounded-2xl shadow-2xl"
             />

@@ -13,15 +13,15 @@ export const Navigation = ({ onBookDemo }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="mx-6 mt-6 bg-white/60 backdrop-blur-[16px] border border-[var(--border-light)] rounded-full shadow-sm">
-        <div className="flex items-center justify-between px-6 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[var(--border-light)] shadow-sm">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src="https://customer-assets.emergentagent.com/job_servai-demo/artifacts/4xi5nw05_Options%205-transparent%20background%20landscape%20copy%20%282%29.png" 
               alt="DD Consulting" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
@@ -42,7 +42,7 @@ export const Navigation = ({ onBookDemo }) => {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-black/5 rounded-full transition-colors"
+            className="md:hidden p-2 hover:bg-black/5 rounded-lg transition-colors"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -50,7 +50,7 @@ export const Navigation = ({ onBookDemo }) => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-[var(--border-light)] px-6 py-4 space-y-3">
+          <div className="md:hidden border-t border-[var(--border-light)] py-4 space-y-3">
             <button onClick={() => scrollToSection('features')} className="block w-full text-left py-2 nav-link">Features</button>
             <button onClick={() => scrollToSection('pricing')} className="block w-full text-left py-2 nav-link">Pricing</button>
             <button onClick={() => scrollToSection('footer')} className="block w-full text-left py-2 nav-link">Contact</button>
@@ -73,7 +73,7 @@ const styles = `
   font-size: 1rem;
   font-weight: 500;
   padding: 6px 12px;
-  border-radius: 9999px;
+  border-radius: 8px;
   transition: all 0.2s ease;
   background: transparent;
   border: none;
@@ -87,15 +87,6 @@ const styles = `
 
 .nav-link:active {
   background: rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  nav > div {
-    margin: 0.5rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid var(--border-light);
-  }
 }
 `;
 

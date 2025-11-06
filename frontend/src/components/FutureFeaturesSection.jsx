@@ -1,8 +1,13 @@
 import React from 'react';
-import { Sparkles, Phone, Video } from 'lucide-react';
+import { Sparkles, Phone, Video, FileText } from 'lucide-react';
 
 export const FutureFeaturesSection = () => {
   const futureFeatures = [
+    {
+      icon: FileText,
+      title: 'Automated Proposals',
+      description: 'Instantly generate and send personalized PDF proposals to qualified leads'
+    },
     {
       icon: Phone,
       title: 'Conversational Voice AI',
@@ -17,7 +22,7 @@ export const FutureFeaturesSection = () => {
 
   return (
     <section className="py-24 px-6" style={{ background: 'var(--bg-section)' }}>
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--accent-wash)] rounded-full mb-6">
           <Sparkles size={20} style={{ color: 'var(--accent-primary)' }} />
           <span className="text-sm font-medium" style={{ color: 'var(--accent-primary)' }}>
@@ -30,7 +35,7 @@ export const FutureFeaturesSection = () => {
           We're constantly innovating. Get ready for upcoming features that will take your customer engagement to the next level.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {futureFeatures.map((feature, index) => (
             <div 
               key={index}
