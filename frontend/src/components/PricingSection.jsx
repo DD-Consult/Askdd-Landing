@@ -1,7 +1,10 @@
-import React from 'react';
-import { Check, Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { Check, Star, Info } from 'lucide-react';
+import { PricingComparisonModal } from './PricingComparisonModal';
 
 export const PricingSection = ({ onBookDemo }) => {
+  const [showComparison, setShowComparison] = useState(false);
+
   const plans = [
     {
       name: 'Essential Chat',
@@ -29,7 +32,6 @@ export const PricingSection = ({ onBookDemo }) => {
         'Multi-Channel (WhatsApp/Messenger)',
         'AI Readiness Assessment',
         'Full Workflow Engine',
-        'Automated Proposal Generation',
         'Client Admin Portal',
         'Live Analytics Dashboard',
         'Priority Support'
@@ -67,7 +69,7 @@ export const PricingSection = ({ onBookDemo }) => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {plans.map((plan, index) => (
             <div 
               key={index}
@@ -125,7 +127,23 @@ export const PricingSection = ({ onBookDemo }) => {
             </div>
           ))}
         </div>
+
+        {/* Detailed Comparison Button */}
+        <div className="text-center">
+          <button 
+            onClick={() => setShowComparison(true)}
+            className="btn-secondary inline-flex items-center gap-2"
+          >
+            <Info size={18} />
+            View Detailed Comparison
+          </button>
+        </div>
       </div>
+
+      <PricingComparisonModal 
+        isOpen={showComparison} 
+        onClose={() => setShowComparison(false)} 
+      />
     </section>
   );
 };
