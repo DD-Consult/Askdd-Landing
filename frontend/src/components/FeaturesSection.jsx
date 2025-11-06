@@ -1,8 +1,18 @@
 import React from 'react';
-import { MessageSquare, FileCheck, Workflow, Settings, BarChart3 } from 'lucide-react';
+import { MessageSquare, FileCheck, Workflow, Wrench, BarChart3, Settings } from 'lucide-react';
 
 export const FeaturesSection = () => {
   const features = [
+    {
+      icon: BarChart3,
+      title: 'Live Analytics Dashboard',
+      description: 'Track conversations, conversions, and popular questions in real-time. Get actionable insights to optimize your customer engagement.'
+    },
+    {
+      icon: Settings,
+      title: 'Fully Customizable',
+      description: 'Match your brand perfectly. Customize colors, sizes, messages, and behavior to create the perfect experience for your customers.'
+    },
     {
       icon: MessageSquare,
       title: 'Multi-Channel Support',
@@ -19,9 +29,9 @@ export const FeaturesSection = () => {
       description: 'Connect seamlessly to your email lists and CRM via Make.com or N8N'
     },
     {
-      icon: Settings,
-      title: 'Full Customization',
-      description: 'Customize branding, messaging, and behavior through the client admin portal'
+      icon: Wrench,
+      title: 'Agent Builder Portal',
+      description: 'Customize your chatbot\'s responses, tone, and appearance. Train the AI with your own data, FAQs, and unique business insights for perfectly tailored interactions.'
     }
   ];
 
@@ -35,7 +45,7 @@ export const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <div 
               key={index}
@@ -64,7 +74,7 @@ export const FeaturesSection = () => {
                 <h3 className="heading-3">Live Analytics Dashboard</h3>
               </div>
               <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
-                Track conversations, conversions, and popular questions in real-time. Get actionable insights to optimize your customer engagement.
+                Monitor your AI assistant's performance with comprehensive analytics. Track engagement metrics, conversion rates, and identify optimization opportunities in real-time.
               </p>
             </div>
             <div className="analytics-showcase">
@@ -86,7 +96,7 @@ export const FeaturesSection = () => {
                 <h3 className="heading-3">Fully Customizable</h3>
               </div>
               <p className="body-medium mb-4" style={{ color: 'var(--text-secondary)' }}>
-                Match your brand perfectly. Customize colors, sizes, messages, and behavior to create the perfect experience for your customers.
+                Complete control over your chatbot's look and feel. Adjust colors, positioning, welcome messages, and interaction styles to perfectly align with your brand identity.
               </p>
             </div>
             <div className="customization-demo">

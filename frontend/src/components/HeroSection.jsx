@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const HeroSection = ({ onBookDemo }) => {
   return (
@@ -17,10 +17,6 @@ export const HeroSection = ({ onBookDemo }) => {
           <button onClick={onBookDemo} className="btn-primary">
             Start Your Free Trial
             <ArrowRight size={18} />
-          </button>
-          <button className="btn-secondary">
-            <Play size={18} />
-            Watch Demo
           </button>
         </div>
         
