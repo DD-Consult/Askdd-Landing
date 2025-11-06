@@ -30,7 +30,7 @@ export const PricingSection = ({ onBookDemo }) => {
       features: [
         'Everything in Essential, PLUS:',
         'Multi-Channel (WhatsApp/Messenger)',
-        'AI Readiness Assessment',
+        'AI-Powered Forms',
         'Full Workflow Engine',
         'Client Admin Portal',
         'Live Analytics Dashboard',
