@@ -29,16 +29,6 @@ class ContactRequest(BaseModel):
     @validator('website')
     def validate_website(cls, v):
         if v and v.strip():
-            # Basic URL validation
-            url_pattern = re.compile(
-                r'^https?://'
-                r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'
-                r'localhost|'
-                r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
-                r'(?::\d+)?'
-                r'(?:/?|[/?]\S+)$', re.IGNORECASE)
-            if not url_pattern.match(v.strip()):
-                raise ValueError('Please enter a valid website URL')
             return v.strip()
         return None
 
