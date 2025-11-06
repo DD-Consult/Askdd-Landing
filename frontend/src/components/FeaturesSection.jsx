@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Brain, Workflow, Settings, BarChart3 } from 'lucide-react';
+import { MessageSquare, FileCheck, Workflow, Settings, BarChart3 } from 'lucide-react';
 
 export const FeaturesSection = () => {
   const features = [
@@ -9,9 +9,9 @@ export const FeaturesSection = () => {
       description: 'Seamlessly engage customers across your website, WhatsApp, and Facebook Messenger'
     },
     {
-      icon: Brain,
-      title: 'AI-Powered Assessment',
-      description: 'Qualify and educate leads through intelligent, conversational interactions'
+      icon: FileCheck,
+      title: 'AI-Powered Forms',
+      description: 'Intelligent forms that adapt and qualify leads through smart, conversational interactions'
     },
     {
       icon: Workflow,

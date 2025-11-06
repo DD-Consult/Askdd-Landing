@@ -43,7 +43,7 @@ export const SolutionSection = () => {
           <div className="relative">
             <div className="solution-mockup">
               <img 
-                src="https://customer-assets.emergentagent.com/job_33a0d074-936c-4861-b14b-10f50673f9e6/artifacts/yo65pjlq_chatbot%20response%20image.png"
+                src="https://customer-assets.emergentagent.com/job_ai-sales-agent-8/artifacts/fktggsov_chatbot%20response%20image.png"
                 alt="Ask DD Conversation Example"
                 className="w-full rounded-2xl shadow-xl"
               />

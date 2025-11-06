@@ -27,18 +27,6 @@ export const HeroSection = ({ onBookDemo }) => {
         <p className="body-small" style={{ color: 'var(--text-muted)' }}>
           No credit card required • 30-day free trial • Setup in minutes
         </p>
-        
-        {/* Hero Image/Mockup */}
-        <div className="mt-16 max-w-5xl mx-auto">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 pointer-events-none"></div>
-            <img 
-              src="https://customer-assets.emergentagent.com/job_ai-sales-agent-8/artifacts/px382ouq_chatbot%20response%20image.png"
-              alt="Ask DD Chatbot Interface"
-              className="w-full rounded-2xl shadow-2xl"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -48,7 +36,7 @@ export const HeroSection = ({ onBookDemo }) => {
 const styles = `
 .hero-section {
   background: var(--gradient-hero);
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +54,7 @@ const styles = `
 @media (max-width: 768px) {
   .hero-section {
     padding: 7rem 1rem 3rem;
-    min-height: 90vh;
+    min-height: 70vh;
   }
 }
 `;
