@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="py-16 px-6" style={{ background: 'var(--text-primary)' }}>
+    <footer id="footer" className="py-16 px-6" style={{ background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-strong) 100%)' }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -20,10 +20,10 @@ export const Footer = () => {
               alt="DD Consulting" 
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
-            <p className="body-medium" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+            <p className="body-medium" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Ask DD by DD Consulting
             </p>
-            <p className="body-small mt-2" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+            <p className="body-small mt-2" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
               Your 24/7 Digital Sales Agent
             </p>
           </div>
@@ -45,7 +45,7 @@ export const Footer = () => {
                 Pricing
               </button>
               <a 
-                href="https://serv-ai.netlify.app/" 
+                href="https://ddconsult.com.au/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="footer-link flex items-center gap-2"
