@@ -6,7 +6,7 @@ export const HeroSection = ({ onBookDemo }) => {
     <section className="hero-section">
       <div className="hero-content">
         <h1 className="heading-1 mb-6">
-          Meet Ask DD: Your 24/7 AI Sales Agent
+          Meet Ask DD:<br />Your 24/7 AI Agent
         </h1>
         
         <p className="body-large mb-8 max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>

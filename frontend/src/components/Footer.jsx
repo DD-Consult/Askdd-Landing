@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="py-16 px-6" style={{ background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-strong) 100%)' }}>
+    <footer id="footer" className="py-16 px-6" style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%)' }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -97,7 +97,7 @@ const styles = `
 }
 
 .footer-link:hover {
-  color: var(--accent-primary);
+  color: #60a5fa;
 }
 `;
 
