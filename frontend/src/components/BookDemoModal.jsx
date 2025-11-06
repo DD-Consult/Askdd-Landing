@@ -120,7 +120,7 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
             <div>
               <label className="form-label">Website (Optional)</label>
               <input
-                type="url"
+                type="text"
                 name="website"
                 value={formData.website}
                 onChange={handleChange}
