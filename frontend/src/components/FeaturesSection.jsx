@@ -4,16 +4,6 @@ import { MessageSquare, FileCheck, Workflow, Wrench, BarChart3, Settings } from 
 export const FeaturesSection = () => {
   const features = [
     {
-      icon: BarChart3,
-      title: 'Live Analytics Dashboard',
-      description: 'Track conversations, conversions, and popular questions in real-time. Get actionable insights to optimize your customer engagement.'
-    },
-    {
-      icon: Settings,
-      title: 'Fully Customizable',
-      description: 'Match your brand perfectly. Customize colors, sizes, messages, and behavior to create the perfect experience for your customers.'
-    },
-    {
       icon: MessageSquare,
       title: 'Multi-Channel Support',
       description: 'Seamlessly engage customers across your website, WhatsApp, and Facebook Messenger'
@@ -44,26 +34,9 @@ export const FeaturesSection = () => {
             Everything you need to automate and scale your customer engagement
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="feature-card"
-            >
-              <div className="feature-icon-wrapper">
-                <feature.icon size={28} style={{ color: 'white' }} />
-              </div>
-              <h3 className="heading-3 mb-3">{feature.title}</h3>
-              <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
 
-        {/* Highlighted Features with Visuals */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20">
+        {/* Highlighted Features with Visuals - MOVED TO TOP */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Live Analytics Dashboard */}
           <div className="feature-highlight">
             <div className="mb-6">
