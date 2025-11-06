@@ -81,6 +81,24 @@ export const FeaturesSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Main Feature Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="feature-card"
+            >
+              <div className="feature-icon-wrapper">
+                <feature.icon size={28} style={{ color: 'white' }} />
+              </div>
+              <h3 className="heading-3 mb-3">{feature.title}</h3>
+              <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
         
         {/* Easy Integration Callout */}
         <div className="mt-16 text-center">
