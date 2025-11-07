@@ -31,9 +31,11 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <FeaturesSection />
+      <CaseStudiesSection />
       <PricingSection onBookDemo={handleBookDemo} />
       <TrialCTASection onBookDemo={handleBookDemo} />
       <FutureFeaturesSection />
+      <FAQSection />
       <Footer />
       <BookDemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
