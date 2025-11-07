@@ -23,7 +23,7 @@ export const FAQSection = () => {
     },
     {
       question: 'How does pricing work?',
-      answer: 'We offer transparent, usage-based pricing with three tiers: Starter ($497/month for up to 1,000 conversations), Professional ($1,297/month for up to 5,000 conversations), and Enterprise (custom pricing for unlimited conversations). All plans include core features, with advanced capabilities like custom integrations and dedicated support available at higher tiers. There's a one-time setup fee of $500-2,000 depending on your plan.'
+      answer: 'We offer transparent, usage-based pricing with three tiers: Starter ($497/month for up to 1,000 conversations), Professional ($1,297/month for up to 5,000 conversations), and Enterprise (custom pricing for unlimited conversations). All plans include core features, with advanced capabilities like custom integrations and dedicated support available at higher tiers. There is a one-time setup fee of $500-2,000 depending on your plan.'
     },
     {
       question: 'Is my data secure with Ask DD?',
@@ -34,8 +34,8 @@ export const FAQSection = () => {
       answer: 'Yes! Ask DD integrates with popular CRM systems including Salesforce, HubSpot, Pipedrive, Zoho CRM, and Microsoft Dynamics. Lead data, conversations, and qualification scores automatically sync to your CRM in real-time. We also offer custom integrations for enterprise clients with proprietary systems.'
     },
     {
-      question: 'What happens when Ask DD can't answer a question?',
-      answer: 'Ask DD is designed to handle this gracefully. When it encounters a question beyond its knowledge, it will either escalate to a human team member with a notification, collect the visitor's contact information to follow up later, or provide relevant resources or documentation. You can configure these fallback behaviors to match your business process.'
+      question: 'What happens when Ask DD cannot answer a question?',
+      answer: 'Ask DD is designed to handle this gracefully. When it encounters a question beyond its knowledge, it will either escalate to a human team member with a notification, collect the visitor contact information to follow up later, or provide relevant resources or documentation. You can configure these fallback behaviors to match your business process.'
     },
     {
       question: 'Do I need technical expertise to use Ask DD?',
