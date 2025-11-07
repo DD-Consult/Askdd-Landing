@@ -23,7 +23,7 @@ export const FAQSection = () => {
     },
     {
       question: 'How does pricing work?',
-      answer: 'We offer transparent, usage-based pricing with three tiers: Starter ($497/month for up to 1,000 conversations), Professional ($1,297/month for up to 5,000 conversations), and Enterprise (custom pricing for unlimited conversations). All plans include core features, with advanced capabilities like custom integrations and dedicated support available at higher tiers. There is a one-time setup fee of $500-2,000 depending on your plan.'
+      answer: 'We offer transparent, usage-based pricing with three tiers: Essential Chat ($22 AUD/month) perfect for solopreneurs and startups, Growth Engine ($50 AUD/month) most popular for growing businesses and agencies, and Enterprise AI ($350 AUD/month) with advanced features for established businesses. All plans include a 30-day free trial. Setup and customization support is included in all plans.'
     },
     {
       question: 'Is my data secure with Ask DD?',
