@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="light">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="description" content="Ask DD - Your 24/7 AI Sales Agent. Turn website visitors, WhatsApp, and Facebook messages into qualified leads automatically." />
+        <meta name="color-scheme" content="light" />
         <title>Ask DD | Your 24/7 AI Sales Agent by DD Consulting</title>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
         <script src="https://unpkg.com/rrweb@latest/dist/rrweb.min.js"></script>
@@ -25,8 +26,15 @@
                 document.head.appendChild(tailwindScript);
             }
         </script>
+        <script>
+            // Force light mode - prevent dark mode from being applied
+            (function() {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+            })();
+        </script>
     </head>
-    <body>
+    <body class="light">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
         
@@ -105,6 +113,23 @@
                 api_host: "https://us.i.posthog.com",
                 person_profiles: "identified_only",
             });
+        </script>
+        <script>
+            // Additional dark mode prevention
+            if (typeof MutationObserver !== 'undefined') {
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                            const html = document.documentElement;
+                            if (html.classList.contains('dark')) {
+                                html.classList.remove('dark');
+                                html.classList.add('light');
+                            }
+                        }
+                    });
+                });
+                observer.observe(document.documentElement, { attributes: true });
+            }
         </script>
         <script src="https://askdd-widget.ddconsult.net.au/widget.js"></script>
         <script>
