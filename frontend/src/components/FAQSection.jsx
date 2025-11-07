@@ -11,7 +11,7 @@ export const FAQSection = () => {
     },
     {
       question: 'How long does it take to set up Ask DD?',
-      answer: 'Setup is quick and straightforward! Most businesses are up and running within 24-48 hours. Our team handles the initial configuration, customizes the AI to your business needs, and provides training. You'll receive a simple code snippet to add to your website, and we'll guide you through the entire process.'
+      answer: 'Setup is quick and straightforward! Most businesses are up and running within 24-48 hours. Our team handles the initial configuration, customizes the AI to your business needs, and provides training. You will receive a simple code snippet to add to your website, and we will guide you through the entire process.'
     },
     {
       question: 'Can I customize Ask DD to match my brand?',
