@@ -47,9 +47,9 @@ export const AnimatedFeaturesCarousel = () => {
   const FeatureComponent = features[currentFeature].component;
 
   return (
-    <div className=\"animated-carousel-container\">
+    <div className="animated-carousel-container">
       {/* Feature Header */}
-      <div className=\"carousel-header\">
+      <div className="carousel-header">
         <AnimatePresence mode=\"wait\">
           <motion.div
             key={currentFeature}
