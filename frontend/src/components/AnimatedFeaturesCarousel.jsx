@@ -74,7 +74,7 @@ export const AnimatedFeaturesCarousel = () => {
       </div>
 
       {/* Animated Feature Display */}
-      <div className=\"carousel-display\">
+      <div className="carousel-display\">
         <AnimatePresence mode=\"wait\">
           <motion.div
             key={currentFeature}
@@ -89,7 +89,7 @@ export const AnimatedFeaturesCarousel = () => {
       </div>
 
       {/* Progress Indicators */}
-      <div className=\"carousel-indicators\">
+      <div className="carousel-indicators\">
         {features.map((feature, index) => (
           <button
             key={feature.id}
@@ -97,10 +97,10 @@ export const AnimatedFeaturesCarousel = () => {
             className={`indicator ${currentFeature === index ? 'active' : ''}`}
             aria-label={`Show ${feature.title}`}
           >
-            <div className=\"indicator-progress\">
+            <div className="indicator-progress\">
               {currentFeature === index && (
                 <motion.div
-                  className=\"indicator-fill\"
+                  className="indicator-fill\"
                   initial={{ width: '0%' }}
                   animate={{ width: '100%' }}
                   transition={{ duration: 4, ease: 'linear' }}
@@ -117,17 +117,17 @@ export const AnimatedFeaturesCarousel = () => {
 // Feature 1: 24/7 Availability
 function Feature24Hours() {
   return (
-    <div className=\"feature-display\">
-      <div className=\"mockup-browser\">
-        <div className=\"browser-header\">
-          <div className=\"browser-dots\">
+    <div className="feature-display\">
+      <div className="mockup-browser\">
+        <div className="browser-header\">
+          <div className="browser-dots\">
             <span></span><span></span><span></span>
           </div>
-          <div className=\"browser-url\">yourwebsite.com</div>
+          <div className="browser-url\">yourwebsite.com</div>
         </div>
-        <div className=\"browser-content\">
+        <div className="browser-content\">
           {/* Day/Night Cycle Animation */}
-          <div className=\"day-night-cycle\">
+          <div className="day-night-cycle">
             <motion.div
               className=\"sun-moon\"
               animate={{
@@ -147,12 +147,12 @@ function Feature24Hours() {
 
           {/* Chatbot Widget */}
           <motion.div
-            className=\"chatbot-widget-demo\"
+            className="chatbot-widget-demo\"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <div className=\"widget-bubble\">
+            <div className="widget-bubble\">
               <motion.div
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -164,15 +164,15 @@ function Feature24Hours() {
 
           {/* Message */}
           <motion.div
-            className=\"availability-message\"
+            className="availability-message\"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
           >
-            <div className=\"message-box\">
+            <div className="message-box\">
               <p>Always online, always ready</p>
-              <div className=\"status-indicator\">
-                <span className=\"status-dot\"></span>
+              <div className="status-indicator\">
+                <span className="status-dot\"></span>
                 Available 24/7
               </div>
             </div>
@@ -195,26 +195,26 @@ function FeatureLeadQualification() {
   }, []);
 
   return (
-    <div className=\"feature-display\">
-      <div className=\"mockup-chat\">
-        <div className=\"chat-messages\">
+    <div className="feature-display\">
+      <div className="mockup-chat\">
+        <div className="chat-messages\">
           <motion.div
-            className=\"chat-message bot\"
+            className="chat-message bot\"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <div className=\"message-bubble\">
+            <div className="message-bubble\">
               Hi! How can I help you today?
             </div>
           </motion.div>
 
           {step >= 1 && (
             <motion.div
-              className=\"chat-message user\"
+              className="chat-message user\"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <div className=\"message-bubble\">
+              <div className="message-bubble\">
                 I'm interested in your services
               </div>
             </motion.div>
@@ -222,11 +222,11 @@ function FeatureLeadQualification() {
 
           {step >= 2 && (
             <motion.div
-              className=\"chat-message bot\"
+              className="chat-message bot\"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <div className=\"message-bubble\">
+              <div className="message-bubble\">
                 Great! Let me ask a few questions...
               </div>
             </motion.div>
@@ -234,15 +234,15 @@ function FeatureLeadQualification() {
 
           {step >= 3 && (
             <motion.div
-              className=\"chat-form\"
+              className="chat-form\"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
             >
-              <div className=\"form-field\">
-                <div className=\"form-label\">Company Name</div>
-                <div className=\"form-input-demo\">
+              <div className="form-field\">
+                <div className="form-label\">Company Name</div>
+                <div className="form-input-demo\">
                   <motion.div
-                    className=\"typing-text\"
+                    className="typing-text"
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
                     transition={{ duration: 1 }}
@@ -251,12 +251,12 @@ function FeatureLeadQualification() {
                   </motion.div>
                 </div>
               </div>
-              <div className=\"form-field\">
-                <div className=\"form-label\">Budget Range</div>
-                <div className=\"form-input-demo\">$5,000 - $10,000</div>
+              <div className="form-field\">
+                <div className="form-label\">Budget Range</div>
+                <div className="form-input-demo\">$5,000 - $10,000</div>
               </div>
               <motion.div
-                className=\"check-icon\"
+                className="check-icon"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5 }}
@@ -274,45 +274,45 @@ function FeatureLeadQualification() {
 // Feature 3: Automated Proposals
 function FeatureAutomatedProposals() {
   return (
-    <div className=\"feature-display\">
-      <div className=\"proposal-demo\">
+    <div className="feature-display\">
+      <div className="proposal-demo\">
         <motion.div
-          className=\"document-stack\"
+          className="document-stack\"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
           {/* PDF Generation Animation */}
           <motion.div
-            className=\"pdf-document\"
+            className="pdf-document\"
             initial={{ scale: 0, rotate: -10 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className=\"pdf-header\">
-              <div className=\"pdf-icon\">📄</div>
-              <div className=\"pdf-title\">Proposal.pdf</div>
+            <div className="pdf-header\">
+              <div className="pdf-icon\">📄</div>
+              <div className="pdf-title\">Proposal.pdf</div>
             </div>
-            <div className=\"pdf-content\">
-              <div className=\"pdf-line long\"></div>
-              <div className=\"pdf-line\"></div>
-              <div className=\"pdf-line long\"></div>
-              <div className=\"pdf-line\"></div>
+            <div className="pdf-content\">
+              <div className="pdf-line long\"></div>
+              <div className="pdf-line\"></div>
+              <div className="pdf-line long\"></div>
+              <div className="pdf-line\"></div>
             </div>
           </motion.div>
 
           {/* Generation Process */}
           <motion.div
-            className=\"generation-status\"
+            className="generation-status\"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            <div className=\"status-steps\">
-              <motion.div className=\"step completed\">
+            <div className="status-steps\">
+              <motion.div className="step completed\">
                 ✓ Analyzing requirements
               </motion.div>
               <motion.div
-                className=\"step completed\"
+                className="step completed\"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
@@ -320,7 +320,7 @@ function FeatureAutomatedProposals() {
                 ✓ Generating content
               </motion.div>
               <motion.div
-                className=\"step completed\"
+                className="step completed\"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.4 }}
@@ -332,12 +332,12 @@ function FeatureAutomatedProposals() {
 
           {/* Success Message */}
           <motion.div
-            className=\"success-badge\"
+            className="success-badge\"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 2, type: 'spring', stiffness: 200 }}
           >
-            <span className=\"badge-icon\">🎉</span>
+            <span className="badge-icon\">🎉</span>
             <span>Proposal Generated!</span>
           </motion.div>
         </motion.div>
@@ -349,19 +349,19 @@ function FeatureAutomatedProposals() {
 // Feature 4: Analytics
 function FeatureAnalytics() {
   return (
-    <div className=\"feature-display\">
-      <div className=\"analytics-demo\">
-        <div className=\"analytics-grid\">
+    <div className="feature-display\">
+      <div className="analytics-demo\">
+        <div className="analytics-grid\">
           {/* Stat Cards */}
           <motion.div
-            className=\"stat-card\"
+            className="stat-card\"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <div className=\"stat-label\">Conversations</div>
+            <div className="stat-label\">Conversations</div>
             <motion.div
-              className=\"stat-value\"
+              className="stat-value\"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -373,17 +373,17 @@ function FeatureAnalytics() {
                 1,247
               </motion.span>
             </motion.div>
-            <div className=\"stat-trend up\">↗ 23%</div>
+            <div className="stat-trend up\">↗ 23%</div>
           </motion.div>
 
           <motion.div
-            className=\"stat-card\"
+            className="stat-card\"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <div className=\"stat-label\">Qualified Leads</div>
-            <motion.div className=\"stat-value\">
+            <div className="stat-label\">Qualified Leads</div>
+            <motion.div className="stat-value\">
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -392,17 +392,17 @@ function FeatureAnalytics() {
                 342
               </motion.span>
             </motion.div>
-            <div className=\"stat-trend up\">↗ 18%</div>
+            <div className="stat-trend up\">↗ 18%</div>
           </motion.div>
 
           <motion.div
-            className=\"stat-card\"
+            className="stat-card\"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <div className=\"stat-label\">Proposals Sent</div>
-            <motion.div className=\"stat-value\">
+            <div className="stat-label\">Proposals Sent</div>
+            <motion.div className="stat-value\">
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -411,22 +411,22 @@ function FeatureAnalytics() {
                 156
               </motion.span>
             </motion.div>
-            <div className=\"stat-trend up\">↗ 31%</div>
+            <div className="stat-trend up\">↗ 31%</div>
           </motion.div>
         </div>
 
         {/* Chart Animation */}
         <motion.div
-          className=\"chart-demo\"
+          className="chart-demo\"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <div className=\"chart-bars\">
+          <div className="chart-bars\">
             {[60, 75, 45, 90, 70, 85, 95].map((height, index) => (
               <motion.div
                 key={index}
-                className=\"chart-bar\"
+                className="chart-bar\"
                 initial={{ height: 0 }}
                 animate={{ height: `${height}%` }}
                 transition={{ delay: 1.2 + index * 0.1, duration: 0.5 }}
