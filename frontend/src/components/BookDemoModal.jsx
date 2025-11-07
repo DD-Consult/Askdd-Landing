@@ -1,62 +1,44 @@
 import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
-import { submitContactForm } from '../utils/mockApi';
 
 export const BookDemoModal = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    location: '',
-    website: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-    setError('');
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Validation
-    if (!formData.name || !formData.email || !formData.location) {
-      setError('Please fill in all required fields');
-      return;
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = {};
+    
+    for (let [key, value] of formData.entries()) {
+      data[key] = value;
     }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setError('Please enter a valid email address');
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    try {
-      const result = await submitContactForm(formData);
-      if (result.success) {
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data })
+    })
+      .then(() => {
         setSubmitted(true);
         setTimeout(() => {
           onClose();
           setSubmitted(false);
-          setFormData({ name: '', email: '', location: '', website: '' });
+          form.reset();
         }, 2500);
-      } else {
-        setError(result.message || 'Failed to submit form. Please try again.');
-      }
-    } catch (err) {
-      setError(err.message || 'Failed to submit form. Please try again or email us directly at askdd@ddconsult.tech');
-    } finally {
-      setIsSubmitting(false);
-    }
+      })
+      .catch(error => {
+        alert("There was an error submitting the form. Please try again or email us at askdd@ddconsult.tech");
+        console.error(error);
+      });
   };
 
   return (
@@ -67,24 +49,31 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
         </DialogHeader>
         
         {!submitted ? (
-          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+          <form 
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="space-y-4 mt-4"
+          >
+            {/* Hidden fields for Netlify Forms */}
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don't fill this out: <input name="bot-field" />
+              </label>
+            </p>
+
             <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
               Leave your details and our team will get back to you within 24 hours to set up your free 30-day trial.
             </p>
-            
-            {error && (
-              <div className="error-message">
-                {error}
-              </div>
-            )}
             
             <div>
               <label className="form-label">Full Name *</label>
               <input
                 type="text"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 className="form-input"
                 placeholder="John Smith"
                 required
@@ -96,8 +85,6 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
               <input
                 type="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 className="form-input"
                 placeholder="john@company.com"
                 required
@@ -109,8 +96,6 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
               <input
                 type="text"
                 name="location"
-                value={formData.location}
-                onChange={handleChange}
                 className="form-input"
                 placeholder="Australia"
                 required
@@ -122,8 +107,6 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
               <input
                 type="text"
                 name="website"
-                value={formData.website}
-                onChange={handleChange}
                 className="form-input"
                 placeholder="https://yourwebsite.com"
               />
@@ -132,10 +115,9 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
             <button 
               type="submit" 
               className="btn-primary w-full"
-              disabled={isSubmitting}
             >
-              {isSubmitting ? 'Submitting...' : 'Submit Request'}
-              {!isSubmitting && <Send size={18} />}
+              Submit Request
+              <Send size={18} />
             </button>
           </form>
         ) : (
