@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the Ask DD landing page contact form backend API"
+user_problem_statement: "Enhanced Ask DD landing page with improved header (scroll effects, trust badge) and added Case Studies and FAQ sections"
 
 backend:
   - task: "Contact Form API - POST /api/contact"
