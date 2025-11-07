@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, CheckCircle2 } from 'lucide-react';
 
 export const Navigation = ({ onBookDemo }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -13,9 +26,17 @@ export const Navigation = ({ onBookDemo }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[var(--border-light)] shadow-sm">
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-white/80 backdrop-blur-md border-b border-[var(--border-light)] shadow-lg' 
+          : 'bg-white border-b border-[var(--border-light)] shadow-sm'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          scrolled ? 'h-16' : 'h-20'
+        }`}>
           {/* Logo */}
           <div className="flex items-center">
             <img 
