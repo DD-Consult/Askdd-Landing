@@ -80,7 +80,9 @@ export const Navigation = ({ onBookDemo }) => {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-[var(--border-light)] py-4 space-y-3">
             <button onClick={() => scrollToSection('features')} className="block w-full text-left py-2 nav-link">Features</button>
+            <button onClick={() => scrollToSection('case-studies')} className="block w-full text-left py-2 nav-link">Success Stories</button>
             <button onClick={() => scrollToSection('pricing')} className="block w-full text-left py-2 nav-link">Pricing</button>
+            <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 nav-link">FAQ</button>
             <button onClick={() => scrollToSection('footer')} className="block w-full text-left py-2 nav-link">Contact</button>
             <button onClick={onBookDemo} className="btn-primary w-full mt-4">
               Start Your Free Trial
@@ -115,6 +117,23 @@ const styles = `
 
 .nav-link:active {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-glow {
+  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(205, 127, 50, 0.3);
+}
+
+.btn-primary-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(205, 127, 50, 0.4);
 }
 `;
 
