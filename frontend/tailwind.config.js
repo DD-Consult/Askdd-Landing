@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: false,
+    darkMode: 'media', // This will be overridden by our CSS
+    important: true, // Make Tailwind classes important
     content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"

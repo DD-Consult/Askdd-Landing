@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force light mode - override everything */
+html,
+body,
+#root,
+.App {
+    background: #FFFFFF !important;
+    color: rgb(14, 15, 12) !important;
+}
+
 body {
     margin: 0;
     font-family:
@@ -52,6 +61,17 @@ code {
         @apply border-border;
     }
     body {
-        @apply bg-background text-foreground;
+        @apply bg-white text-foreground;
+    }
+}
+
+/* Explicitly override any dark mode styles */
+@media (prefers-color-scheme: dark) {
+    html,
+    body,
+    #root,
+    .App {
+        background: #FFFFFF !important;
+        color: rgb(14, 15, 12) !important;
     }
 }
