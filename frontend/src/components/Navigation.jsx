@@ -62,7 +62,7 @@ export const Navigation = ({ onBookDemo }) => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button onClick={onBookDemo} className="btn-primary-glow">
+            <button onClick={onBookDemo} className="btn-primary">
               Start Your Free Trial
             </button>
           </div>
