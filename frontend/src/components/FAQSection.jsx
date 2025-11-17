@@ -106,12 +106,12 @@ export const FAQSection = ({ onBookDemo }) => {
           <p className="text-[var(--text-muted)] mb-4">
             Our team is here to help you get started
           </p>
-          <a 
-            href="#footer" 
-            className="inline-block px-6 py-3 bg-[var(--primary-600)] text-white font-semibold rounded-lg hover:bg-[var(--primary-700)] transition-colors"
+          <button 
+            onClick={onBookDemo}
+            className="btn-primary"
           >
             Contact Us
-          </a>
+          </button>
         </div>
       </div>
     </section>
