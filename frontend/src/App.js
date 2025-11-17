@@ -12,9 +12,11 @@ import { FutureFeaturesSection } from './components/FutureFeaturesSection';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 import { BookDemoModal } from './components/BookDemoModal';
+import { ContactModal } from './components/ContactModal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const handleBookDemo = () => {
     setIsModalOpen(true);
@@ -22,6 +24,14 @@ function App() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleContactUs = () => {
+    setIsContactModalOpen(true);
+  };
+
+  const handleCloseContactModal = () => {
+    setIsContactModalOpen(false);
   };
 
   return (
