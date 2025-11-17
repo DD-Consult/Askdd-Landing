@@ -559,16 +559,15 @@ const styles = `
 .sun-moon {
   position: relative;
   font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
 .sun, .moon {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.moon {
-  transform: rotate(180deg);
+  display: block;
 }
 
 .chatbot-widget-demo {
