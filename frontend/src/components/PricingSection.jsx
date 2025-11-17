@@ -195,6 +195,14 @@ const styles = `
   gap: 6px;
   box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
 }
+
+.conversation-limit {
+  display: inline-block;
+  background: rgba(234, 88, 12, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
 `;
 
 const styleSheet = document.createElement('style');
