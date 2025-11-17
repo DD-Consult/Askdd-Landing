@@ -43,7 +43,7 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="modal-content">
+      <DialogContent className="modal-content" style={{ background: 'white' }}>
         <DialogHeader>
           <DialogTitle className="heading-3">Start Your Free Trial</DialogTitle>
         </DialogHeader>
