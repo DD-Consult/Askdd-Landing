@@ -116,8 +116,6 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
 /* Styles */
 const styles = `
 .comparison-modal-content {
-  max-width: 1100px;
-  max-height: 90vh;
   background: var(--bg-card);
   border-radius: 16px;
   padding: 40px;
@@ -129,12 +127,15 @@ const styles = `
   margin: 24px 0;
   border: 1px solid var(--border-light);
   border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table {
   width: 100%;
+  min-width: 800px;
   border-collapse: collapse;
   background: white;
+  table-layout: fixed;
 }
 
 .comparison-table thead {
