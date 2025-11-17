@@ -118,8 +118,10 @@ const styles = `
 .comparison-modal-content {
   background: var(--bg-card);
   border-radius: 16px;
-  padding: 40px;
+  padding: 32px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .comparison-table-wrapper {
@@ -128,11 +130,12 @@ const styles = `
   border: 1px solid var(--border-light);
   border-radius: 12px;
   -webkit-overflow-scrolling: touch;
+  flex-shrink: 0;
 }
 
 .comparison-table {
   width: 100%;
-  min-width: 800px;
+  min-width: 700px;
   border-collapse: collapse;
   background: white;
   table-layout: fixed;
