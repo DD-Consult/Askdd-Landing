@@ -107,7 +107,7 @@ export const FAQSection = ({ onContactUs }) => {
             Our team is here to help you get started
           </p>
           <button 
-            onClick={onBookDemo}
+            onClick={onContactUs}
             className="btn-primary"
           >
             Contact Us
