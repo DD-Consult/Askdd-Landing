@@ -9,6 +9,7 @@ export const PricingSection = ({ onBookDemo }) => {
     {
       name: 'Essential Chat',
       price: '$22',
+      conversations: '250',
       audience: 'Solopreneurs & Startups',
       description: 'Perfect for getting started with AI chat',
       features: [
@@ -25,6 +26,7 @@ export const PricingSection = ({ onBookDemo }) => {
     {
       name: 'Growth Engine',
       price: '$50',
+      conversations: '1,250',
       audience: 'Growing Businesses & Agencies',
       description: 'Most popular for scaling businesses',
       features: [
@@ -42,6 +44,7 @@ export const PricingSection = ({ onBookDemo }) => {
     {
       name: 'Enterprise AI',
       price: '$350',
+      conversations: '5,000',
       audience: 'Established Businesses',
       description: 'Advanced features for enterprise needs',
       features: [
