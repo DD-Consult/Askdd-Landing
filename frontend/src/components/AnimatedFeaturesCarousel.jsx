@@ -39,7 +39,7 @@ export const AnimatedFeaturesCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
+    }, 7000);
 
     return () => clearInterval(timer);
   }, []);
