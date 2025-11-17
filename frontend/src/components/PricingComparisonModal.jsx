@@ -154,12 +154,12 @@ const styles = `
 .comparison-table th.feature-column {
   font-weight: 600;
   color: var(--text-primary);
-  width: 40%;
+  width: 35%;
 }
 
 .comparison-table th.plan-column {
   text-align: center;
-  width: 20%;
+  width: 21.67%;
 }
 
 .comparison-table th.popular {
