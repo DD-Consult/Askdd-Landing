@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-export const FAQSection = ({ onBookDemo }) => {
+export const FAQSection = ({ onContactUs }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
