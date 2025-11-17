@@ -196,7 +196,12 @@ function FeatureLeadQualification() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setStep((prev) => (prev + 1) % 4);
+      setStep((prev) => {
+        if (prev < 3) {
+          return prev + 1;
+        }
+        return prev; // Stay at step 3
+      });
     }, 2000);
     return () => clearInterval(timer);
   }, []);
