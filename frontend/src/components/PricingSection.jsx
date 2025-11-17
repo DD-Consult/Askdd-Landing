@@ -98,9 +98,14 @@ export const PricingSection = ({ onBookDemo }) => {
                     AUD/month
                   </span>
                 </div>
-                <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
+                <p className="body-medium mb-2" style={{ color: 'var(--text-secondary)' }}>
                   {plan.description}
                 </p>
+                <div className="conversation-limit">
+                  <span className="body-small font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                    {plan.conversations} conversations/month
+                  </span>
+                </div>
               </div>
               
               <button 
