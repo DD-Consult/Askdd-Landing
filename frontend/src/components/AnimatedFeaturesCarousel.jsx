@@ -4,6 +4,7 @@ import { Clock, FileCheck, FileText, TrendingUp } from 'lucide-react';
 
 export const AnimatedFeaturesCarousel = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
+  const [timerKey, setTimerKey] = useState(0); // Key to force timer reset
 
   const features = [
     {
@@ -39,10 +40,15 @@ export const AnimatedFeaturesCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 9000);
+    }, 11000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [timerKey]); // Reset timer when timerKey changes
+
+  const handleIndicatorClick = (index) => {
+    setCurrentFeature(index);
+    setTimerKey(prev => prev + 1); // Force timer reset
+  };
 
   const FeatureComponent = features[currentFeature].component;
 
