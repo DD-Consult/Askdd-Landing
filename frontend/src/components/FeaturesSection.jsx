@@ -175,6 +175,18 @@ const styles = `
   overflow: hidden;
   border-radius: 12px;
 }
+
+.customization-demo {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.customization-img {
+  object-fit: cover;
+  object-position: top;
+  height: 400px;
+  width: 100%;
+}
 `;
 
 const styleSheet = document.createElement('style');
