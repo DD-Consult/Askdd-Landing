@@ -116,11 +116,11 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
 /* Styles */
 const styles = `
 .comparison-modal-content {
-  max-width: 900px;
+  max-width: 1100px;
   max-height: 90vh;
   background: var(--bg-card);
   border-radius: 16px;
-  padding: 32px;
+  padding: 40px;
   overflow-y: auto;
 }
 
