@@ -10,7 +10,7 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
     { name: 'Email Lead Alerts', essential: true, growth: true, enterprise: true },
     { name: 'Basic Analytics', essential: true, growth: false, enterprise: false },
     { name: 'Website Integration Code', essential: true, growth: true, enterprise: true },
-    { name: 'Monthly Conversations', essential: '100', growth: '500', enterprise: '2,000' },
+    { name: 'Monthly Conversations', essential: '250', growth: '1,250', enterprise: '5,000' },
     { name: 'Multi-Channel (WhatsApp/Messenger)', essential: false, growth: true, enterprise: true },
     { name: 'AI-Powered Forms', essential: false, growth: true, enterprise: true },
     { name: 'Full Workflow Engine (Make/N8N)', essential: false, growth: true, enterprise: true },
