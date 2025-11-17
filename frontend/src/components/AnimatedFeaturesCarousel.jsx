@@ -112,6 +112,15 @@ export const AnimatedFeaturesCarousel = () => {
 };
 
 function Feature24Hours() {
+  const [isDayTime, setIsDayTime] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setIsDayTime(prev => !prev);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="feature-display">
       <div className="mockup-browser">
@@ -125,18 +134,17 @@ function Feature24Hours() {
           <div className="day-night-cycle">
             <motion.div
               className="sun-moon"
-              animate={{
-                rotate: [0, 180, 360],
-                y: [0, -20, 0]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
+              key={isDayTime ? 'day' : 'night'}
+              initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
             >
-              <div className="sun">☀️</div>
-              <div className="moon">🌙</div>
+              {isDayTime ? (
+                <div className="sun">☀️</div>
+              ) : (
+                <div className="moon">🌙</div>
+              )}
             </motion.div>
           </div>
 
