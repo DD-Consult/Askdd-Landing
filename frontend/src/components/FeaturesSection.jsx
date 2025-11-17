@@ -177,14 +177,14 @@ const styles = `
 }
 
 .customization-demo {
-  max-height: 400px;
+  max-height: 300px;
   overflow: hidden;
 }
 
 .customization-img {
   object-fit: cover;
   object-position: top;
-  height: 400px;
+  height: 300px;
   width: 100%;
 }
 `;
