@@ -35,7 +35,7 @@ function App() {
       <PricingSection onBookDemo={handleBookDemo} />
       <TrialCTASection onBookDemo={handleBookDemo} />
       <FutureFeaturesSection />
-      <FAQSection />
+      <FAQSection onBookDemo={handleBookDemo} />
       <Footer />
       <BookDemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
