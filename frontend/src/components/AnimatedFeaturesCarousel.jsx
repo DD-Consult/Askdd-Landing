@@ -100,7 +100,7 @@ export const AnimatedFeaturesCarousel = () => {
                   className="indicator-fill"
                   initial={{ width: '0%' }}
                   animate={{ width: '100%' }}
-                  transition={{ duration: 7, ease: 'linear' }}
+                  transition={{ duration: 9, ease: 'linear' }}
                 />
               )}
             </div>
