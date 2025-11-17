@@ -138,7 +138,7 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
 const styles = `
 .modal-content {
   max-width: 500px;
-  background: var(--bg-card);
+  background: white !important;
   border-radius: 16px;
   padding: 32px;
 }
@@ -161,7 +161,7 @@ const styles = `
   font-size: 1rem;
   color: var(--text-body);
   transition: all 0.2s ease;
-  background: var(--bg-card);
+  background: white !important;
 }
 
 .form-input:focus {
