@@ -96,17 +96,18 @@ export const AnimatedFeaturesCarousel = () => {
         {features.map((feature, index) => (
           <button
             key={feature.id}
-            onClick={() => setCurrentFeature(index)}
+            onClick={() => handleIndicatorClick(index)}
             className={`indicator ${currentFeature === index ? 'active' : ''}`}
             aria-label={`Show ${feature.title}`}
           >
             <div className="indicator-progress">
               {currentFeature === index && (
                 <motion.div
+                  key={timerKey} // Force re-render when timer resets
                   className="indicator-fill"
                   initial={{ width: '0%' }}
                   animate={{ width: '100%' }}
-                  transition={{ duration: 9, ease: 'linear' }}
+                  transition={{ duration: 11, ease: 'linear' }}
                 />
               )}
             </div>
