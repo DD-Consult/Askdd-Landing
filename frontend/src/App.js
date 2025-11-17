@@ -45,9 +45,10 @@ function App() {
       <PricingSection onBookDemo={handleBookDemo} />
       <TrialCTASection onBookDemo={handleBookDemo} />
       <FutureFeaturesSection />
-      <FAQSection onBookDemo={handleBookDemo} />
+      <FAQSection onContactUs={handleContactUs} />
       <Footer />
       <BookDemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <ContactModal isOpen={isContactModalOpen} onClose={handleCloseContactModal} />
     </div>
   );
 }
