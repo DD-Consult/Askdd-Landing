@@ -38,7 +38,7 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="comparison-modal-content max-w-[1100px] w-[95vw]">
+      <DialogContent className="comparison-modal-content max-w-[800px] w-[90vw] max-h-[85vh]">
         <DialogHeader>
           <DialogTitle className="heading-3">Detailed Plan Comparison</DialogTitle>
         </DialogHeader>
