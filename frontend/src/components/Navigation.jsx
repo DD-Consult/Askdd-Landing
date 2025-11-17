@@ -118,23 +118,6 @@ const styles = `
 .nav-link:active {
   background: rgba(0, 0, 0, 0.1);
 }
-
-.btn-primary-glow {
-  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
-  color: white;
-  padding: 10px 24px;
-  border-radius: 12px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(205, 127, 50, 0.3);
-}
-
-.btn-primary-glow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(205, 127, 50, 0.4);
-}
 `;
 
 const styleSheet = document.createElement('style');
