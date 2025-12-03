@@ -24,7 +24,7 @@ export const PrivacyPolicy = () => {
           Privacy Policy for AskDD
         </h1>
         <p className="text-lg text-[var(--text-muted)] mb-12">
-          Last Updated: 2025-12-01
+          Last Updated: 2025-12-03
         </p>
 
         <div className="prose prose-lg max-w-none">
@@ -76,7 +76,7 @@ export const PrivacyPolicy = () => {
             <p className="text-[var(--text-body)] leading-relaxed mb-4">
               We use the information we collect for the following purposes:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-[var(--text-body)]">
+            <ul className="list-disc pl-6 space-y-2 text-[var(--text-body)] mb-4">
               <li>
                 <strong>Authentication:</strong> To verify your identity and allow you to log in to 
                 the AskDD console securely.
@@ -90,24 +90,104 @@ export const PrivacyPolicy = () => {
                 critical updates to our service.
               </li>
             </ul>
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3 mt-6">
+              AI Chatbot & Message Processing
+            </h3>
+            <p className="text-[var(--text-body)] leading-relaxed mb-4">
+              Beyond account authentication, when you interact with the AskDD chatbot via WhatsApp or 
+              other messaging channels, we process:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-[var(--text-body)]">
+              <li>
+                <strong>Message Content:</strong> The text and media you send to the bot.
+              </li>
+              <li>
+                <strong>Metadata:</strong> Phone numbers, timestamps, and message delivery status.
+              </li>
+              <li>
+                <strong>Purpose:</strong> This data is processed solely to generate conversational 
+                responses and facilitate customer support.
+              </li>
+            </ul>
           </section>
 
           {/* Section 4 */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
-              4. Data Sharing
+              4. Artificial Intelligence and Data Sovereignty
             </h2>
+            
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3 mt-6">
+              4.1 Inference-Only Processing (No Training)
+            </h3>
+            <p className="text-[var(--text-body)] leading-relaxed mb-4">
+              We utilize Amazon Web Services (AWS Bedrock) to process your queries. In accordance with 
+              AWS Service Terms, your message data is isolated. It is not shared with foundational model 
+              providers (e.g., Anthropic, Cohere, Meta) for model training, nor is it used to improve 
+              their public AI models.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3 mt-6">
+              4.2 Retrieval-Augmented Generation (RAG)
+            </h3>
+            <p className="text-[var(--text-body)] leading-relaxed mb-4">
+              The AI generates answers by retrieving information from our private, isolated knowledge base. 
+              Your specific conversations remain within our secure cloud environment and are not ingested 
+              into a public dataset.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3 mt-6">
+              4.3 Automated Safety Classification
+            </h3>
             <p className="text-[var(--text-body)] leading-relaxed">
-              We do not sell, trade, or rent your personal identification information to others. 
-              We do not share your data with third parties except as necessary to provide the 
-              service (e.g., cloud hosting providers) or as required by law.
+              You acknowledge that our infrastructure providers (Meta and AWS) employ automated abuse 
+              detection systems to filter harmful content (e.g., hate speech, malware). This processing 
+              is transient and automated; human review of your private chats occurs only in the event of 
+              a severe legal or safety violation.
             </p>
           </section>
 
           {/* Section 5 */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
-              5. How to Request Data Deletion
+              5. Data Sharing
+            </h2>
+            <p className="text-[var(--text-body)] leading-relaxed mb-4">
+              We do not sell, trade, or rent your personal identification information to others. 
+              We do not share your data with third parties except as necessary to provide the 
+              service (e.g., cloud hosting providers) or as required by law.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3 mt-6">
+              5.1 International Data Transfers
+            </h3>
+            <p className="text-[var(--text-body)] leading-relaxed mb-4">
+              While our primary database and AI processing are hosted in Australia (AWS Sydney), you 
+              acknowledge that using the WhatsApp and Instagram networks requires data to transit through 
+              Meta Platforms' servers located in the United States and Ireland. By using the service, you 
+              expressly consent to this cross-border transmission necessary for the delivery of messages.
+            </p>
+
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3 mt-6">
+              5.2 Third-Party Platform Terms (WhatsApp)
+            </h3>
+            <ul className="list-disc pl-6 space-y-2 text-[var(--text-body)]">
+              <li>
+                <strong>Consent to Message:</strong> By opting in to the service via our website or 
+                initiating a chat, you agree to receive automated AI-driven responses.
+              </li>
+              <li>
+                <strong>Opt-Out:</strong> You may revoke consent at any time by replying "STOP" or 
+                "Unsubscribe" to any WhatsApp message. We will immediately cease marketing and 
+                non-transactional automation.
+              </li>
+            </ul>
+          </section>
+
+          {/* Section 6 */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+              6. How to Request Data Deletion
             </h2>
             <p className="text-[var(--text-body)] leading-relaxed mb-4">
               In accordance with Facebook Platform rules, you have the right to request that your 
@@ -133,10 +213,10 @@ export const PrivacyPolicy = () => {
             </p>
           </section>
 
-          {/* Section 6 */}
+          {/* Section 7 */}
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
-              6. Contact Us
+              7. Contact Us
             </h2>
             <p className="text-[var(--text-body)] leading-relaxed mb-4">
               If you have any questions about this Privacy Policy, please contact us at:
