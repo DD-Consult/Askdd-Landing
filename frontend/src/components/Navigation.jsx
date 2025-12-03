@@ -85,6 +85,7 @@ export const Navigation = ({ onBookDemo }) => {
             <button onClick={() => scrollToSection('case-studies')} className="block w-full text-left py-2 nav-link">Success Stories</button>
             <button onClick={() => scrollToSection('pricing')} className="block w-full text-left py-2 nav-link">Pricing</button>
             <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 nav-link">FAQ</button>
+            <Link to="/privacy-policy" className="block w-full text-left py-2 nav-link">Privacy Policy</Link>
             <button onClick={() => scrollToSection('footer')} className="block w-full text-left py-2 nav-link">Contact</button>
             <button onClick={onBookDemo} className="btn-primary w-full mt-4">
               Start Your Free Trial
