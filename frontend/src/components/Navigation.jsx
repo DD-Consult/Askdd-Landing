@@ -58,6 +58,7 @@ export const Navigation = ({ onBookDemo }) => {
             <button onClick={() => scrollToSection('case-studies')} className="nav-link">Success Stories</button>
             <button onClick={() => scrollToSection('pricing')} className="nav-link">Pricing</button>
             <button onClick={() => scrollToSection('faq')} className="nav-link">FAQ</button>
+            <Link to="/privacy-policy" className="nav-link">Privacy Policy</Link>
             <button onClick={() => scrollToSection('footer')} className="nav-link">Contact</button>
           </div>
 
