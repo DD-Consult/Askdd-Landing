@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Navigation } from './components/Navigation';
 import { HeroSection } from './components/HeroSection';
@@ -13,6 +14,7 @@ import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 import { BookDemoModal } from './components/BookDemoModal';
 import { ContactModal } from './components/ContactModal';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,8 +36,9 @@ function App() {
     setIsContactModalOpen(false);
   };
 
-  return (
-    <div className="App">
+  // Home page component
+  const HomePage = () => (
+    <>
       <Navigation onBookDemo={handleBookDemo} />
       <HeroSection onBookDemo={handleBookDemo} />
       <ProblemSection />
@@ -49,7 +52,18 @@ function App() {
       <Footer />
       <BookDemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
       <ContactModal isOpen={isContactModalOpen} onClose={handleCloseContactModal} />
-    </div>
+    </>
+  );
+
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
