@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Navigation = ({ onBookDemo }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
