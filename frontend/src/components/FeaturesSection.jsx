@@ -76,7 +76,7 @@ export const FeaturesSection = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_33a0d074-936c-4861-b14b-10f50673f9e6/artifacts/pf9fjkf3_customisations%20screenshot.png"
                 alt="Ask DD Customization Options"
-                className="w-full rounded-xl shadow-2xl border border-[var(--border-light)]"
+                className="w-full rounded-xl shadow-2xl border border-[var(--border-light)] customization-img"
               />
             </div>
           </div>
@@ -174,6 +174,18 @@ const styles = `
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+}
+
+.customization-demo {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.customization-img {
+  object-fit: cover;
+  object-position: top;
+  height: 300px;
+  width: 100%;
 }
 `;
 

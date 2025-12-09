@@ -10,7 +10,7 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
     { name: 'Email Lead Alerts', essential: true, growth: true, enterprise: true },
     { name: 'Basic Analytics', essential: true, growth: false, enterprise: false },
     { name: 'Website Integration Code', essential: true, growth: true, enterprise: true },
-    { name: 'Monthly Conversations', essential: '100', growth: '500', enterprise: '2,000' },
+    { name: 'Monthly Conversations', essential: '250', growth: '1,250', enterprise: '5,000' },
     { name: 'Multi-Channel (WhatsApp/Messenger)', essential: false, growth: true, enterprise: true },
     { name: 'AI-Powered Forms', essential: false, growth: true, enterprise: true },
     { name: 'Full Workflow Engine (Make/N8N)', essential: false, growth: true, enterprise: true },
@@ -38,7 +38,7 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="comparison-modal-content">
+      <DialogContent className="comparison-modal-content max-w-[800px] w-[90vw] max-h-[85vh]">
         <DialogHeader>
           <DialogTitle className="heading-3">Detailed Plan Comparison</DialogTitle>
         </DialogHeader>
@@ -116,12 +116,12 @@ export const PricingComparisonModal = ({ isOpen, onClose }) => {
 /* Styles */
 const styles = `
 .comparison-modal-content {
-  max-width: 900px;
-  max-height: 90vh;
   background: var(--bg-card);
   border-radius: 16px;
   padding: 32px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .comparison-table-wrapper {
@@ -129,12 +129,16 @@ const styles = `
   margin: 24px 0;
   border: 1px solid var(--border-light);
   border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+  flex-shrink: 0;
 }
 
 .comparison-table {
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
   background: white;
+  table-layout: fixed;
 }
 
 .comparison-table thead {
@@ -153,12 +157,12 @@ const styles = `
 .comparison-table th.feature-column {
   font-weight: 600;
   color: var(--text-primary);
-  width: 40%;
+  width: 35%;
 }
 
 .comparison-table th.plan-column {
   text-align: center;
-  width: 20%;
+  width: 21.67%;
 }
 
 .comparison-table th.popular {

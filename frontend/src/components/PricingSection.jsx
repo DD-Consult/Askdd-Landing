@@ -9,6 +9,7 @@ export const PricingSection = ({ onBookDemo }) => {
     {
       name: 'Essential Chat',
       price: '$22',
+      conversations: '250',
       audience: 'Solopreneurs & Startups',
       description: 'Perfect for getting started with AI chat',
       features: [
@@ -25,6 +26,7 @@ export const PricingSection = ({ onBookDemo }) => {
     {
       name: 'Growth Engine',
       price: '$50',
+      conversations: '1,250',
       audience: 'Growing Businesses & Agencies',
       description: 'Most popular for scaling businesses',
       features: [
@@ -42,6 +44,7 @@ export const PricingSection = ({ onBookDemo }) => {
     {
       name: 'Enterprise AI',
       price: '$350',
+      conversations: '5,000',
       audience: 'Established Businesses',
       description: 'Advanced features for enterprise needs',
       features: [
@@ -95,9 +98,14 @@ export const PricingSection = ({ onBookDemo }) => {
                     AUD/month
                   </span>
                 </div>
-                <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
+                <p className="body-medium mb-2" style={{ color: 'var(--text-secondary)' }}>
                   {plan.description}
                 </p>
+                <div className="conversation-limit">
+                  <span className="body-small font-semibold" style={{ color: 'var(--accent-primary)' }}>
+                    {plan.conversations} conversations/month
+                  </span>
+                </div>
               </div>
               
               <button 
@@ -186,6 +194,14 @@ const styles = `
   align-items: center;
   gap: 6px;
   box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+
+.conversation-limit {
+  display: inline-block;
+  background: rgba(234, 88, 12, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
 }
 `;
 

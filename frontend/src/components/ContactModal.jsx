@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { X, Send } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 
-export const BookDemoModal = ({ isOpen, onClose }) => {
+export const ContactModal = ({ isOpen, onClose }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const encode = (data) => {
@@ -25,7 +25,7 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data })
+      body: encode({ "form-name": "contact-query", ...data })
     })
       .then(() => {
         setSubmitted(true);
@@ -43,14 +43,14 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="modal-content" style={{ background: 'white' }}>
+      <DialogContent className="contact-modal-content" style={{ background: 'white' }}>
         <DialogHeader>
-          <DialogTitle className="heading-3">Start Your Free Trial</DialogTitle>
+          <DialogTitle className="heading-3">Contact Us</DialogTitle>
         </DialogHeader>
         
         {!submitted ? (
           <form 
-            name="contact"
+            name="contact-query"
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -58,7 +58,7 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
             className="space-y-4 mt-4"
           >
             {/* Hidden fields for Netlify Forms */}
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact-query" />
             <p hidden>
               <label>
                 Don't fill this out: <input name="bot-field" />
@@ -66,19 +66,8 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
             </p>
 
             <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
-              Leave your details and our team will get back to you within 24 hours to set up your free 30-day trial.
+              Have a question? Send us a message and we'll get back to you within 24 hours.
             </p>
-            
-            <div>
-              <label className="form-label">Full Name *</label>
-              <input
-                type="text"
-                name="name"
-                className="form-input"
-                placeholder="John Smith"
-                required
-              />
-            </div>
             
             <div>
               <label className="form-label">Email Address *</label>
@@ -86,29 +75,19 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
                 type="email"
                 name="email"
                 className="form-input"
-                placeholder="john@company.com"
+                placeholder="your.email@company.com"
                 required
               />
             </div>
             
             <div>
-              <label className="form-label">Country / Location *</label>
-              <input
-                type="text"
-                name="location"
-                className="form-input"
-                placeholder="Australia"
+              <label className="form-label">Your Message / Query *</label>
+              <textarea
+                name="message"
+                className="form-textarea"
+                placeholder="Tell us what you'd like to know..."
+                rows="5"
                 required
-              />
-            </div>
-            
-            <div>
-              <label className="form-label">Website (Optional)</label>
-              <input
-                type="text"
-                name="website"
-                className="form-input"
-                placeholder="https://yourwebsite.com"
               />
             </div>
             
@@ -116,16 +95,16 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
               type="submit" 
               className="btn-primary w-full"
             >
-              Submit Request
+              Send Message
               <Send size={18} />
             </button>
           </form>
         ) : (
           <div className="success-message">
             <div className="success-icon">✓</div>
-            <h3 className="heading-3 mb-2">Thank You!</h3>
+            <h3 className="heading-3 mb-2">Message Sent!</h3>
             <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
-              We've received your request. Our team will contact you shortly!
+              Thank you for contacting us. We'll respond to your query shortly!
             </p>
           </div>
         )}
@@ -136,7 +115,7 @@ export const BookDemoModal = ({ isOpen, onClose }) => {
 
 /* Styles */
 const styles = `
-.modal-content {
+.contact-modal-content {
   max-width: 500px;
   background: white !important;
   border-radius: 16px;
@@ -164,23 +143,30 @@ const styles = `
   background: white !important;
 }
 
-.form-input:focus {
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  color: var(--text-body);
+  transition: all 0.2s ease;
+  background: white !important;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px var(--accent-wash);
 }
 
-.form-input::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
   color: var(--text-muted);
-}
-
-.error-message {
-  padding: 12px 16px;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  border-radius: 8px;
-  color: rgb(185, 28, 28);
-  font-size: 0.875rem;
 }
 
 .success-message {

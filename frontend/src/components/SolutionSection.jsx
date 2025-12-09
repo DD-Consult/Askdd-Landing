@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { AnimatedFeaturesCarousel } from './AnimatedFeaturesCarousel';
 
 export const SolutionSection = () => {
   const benefits = [
@@ -39,18 +40,12 @@ export const SolutionSection = () => {
             </div>
           </div>
           
-          {/* Right: Image */}
+          {/* Right: Animated Features Carousel */}
           <div className="relative">
-            <div className="solution-mockup">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_ai-sales-agent-8/artifacts/fktggsov_chatbot%20response%20image.png"
-                alt="Ask DD Conversation Example"
-                className="w-full rounded-2xl shadow-xl"
-              />
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-[var(--accent-blue)] opacity-10 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[var(--accent-primary)] opacity-10 rounded-full blur-3xl"></div>
-            </div>
+            <AnimatedFeaturesCarousel />
+            {/* Decorative elements */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-[var(--accent-blue)] opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[var(--accent-primary)] opacity-10 rounded-full blur-3xl pointer-events-none"></div>
           </div>
         </div>
       </div>
