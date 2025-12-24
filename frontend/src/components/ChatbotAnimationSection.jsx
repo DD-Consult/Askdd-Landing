@@ -149,18 +149,26 @@ const ChatConversationAnimation = () => {
 // Animation 2: Multi-Platform Deployment
 const MultiPlatformAnimation = () => {
   const [activePlatform, setActivePlatform] = useState(0);
+  const [showMessage, setShowMessage] = useState(false);
 
   const platforms = [
-    { name: 'Website', icon: '🌐', color: '#3b82f6' },
-    { name: 'WhatsApp', icon: '💬', color: '#25D366' },
-    { name: 'Facebook', icon: '👥', color: '#1877F2' },
-    { name: 'Instagram', icon: '📸', color: '#E4405F' },
+    { name: 'Website', icon: '🌐', color: '#3b82f6', question: 'Hi, need help!', response: 'Hello! I can help you.' },
+    { name: 'WhatsApp', icon: '💬', color: '#25D366', question: 'What are your hours?', response: 'We\'re available 24/7!' },
+    { name: 'Facebook', icon: '👥', color: '#1877F2', question: 'Tell me about pricing', response: 'Let me send you details!' },
+    { name: 'Instagram', icon: '📸', color: '#E4405F', question: 'Can you help me?', response: 'Absolutely! What do you need?' },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActivePlatform((prev) => (prev + 1) % platforms.length);
-    }, 2000);
+      setShowMessage(false);
+      setTimeout(() => {
+        setActivePlatform((prev) => (prev + 1) % platforms.length);
+        setShowMessage(true);
+      }, 200);
+    }, 3000);
+
+    // Show message initially
+    setShowMessage(true);
 
     return () => clearInterval(interval);
   }, []);
@@ -171,7 +179,7 @@ const MultiPlatformAnimation = () => {
         <Globe className="animation-icon" />
         <h3 className="heading-3">One AI, All Platforms</h3>
         <p className="body-small" style={{ color: 'var(--text-secondary)' }}>
-          Deploy everywhere your customers are
+          Customers reach you anywhere, Ask DD responds everywhere
         </p>
       </div>
 
@@ -203,6 +211,18 @@ const MultiPlatformAnimation = () => {
                 )}
               </div>
               <div className="body-small platform-name">{platform.name}</div>
+              
+              {/* Message bubbles for active platform */}
+              {activePlatform === index && showMessage && (
+                <div className="platform-messages">
+                  <div className="platform-msg user-msg">
+                    {platform.question}
+                  </div>
+                  <div className="platform-msg bot-msg">
+                    {platform.response}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
