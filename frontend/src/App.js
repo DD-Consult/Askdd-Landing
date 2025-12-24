@@ -42,6 +42,7 @@ function App() {
     <>
       <Navigation onBookDemo={handleBookDemo} />
       <HeroSection onBookDemo={handleBookDemo} />
+      <ChatbotAnimationSection />
       <ProblemSection />
       <SolutionSection />
       <FeaturesSection />
