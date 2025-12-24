@@ -726,6 +726,15 @@ const styles = `
     padding: 1rem;
     gap: 1rem;
   }
+
+  .platform-messages {
+    min-width: 150px;
+  }
+
+  .platform-msg {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
 }
 `;
 
