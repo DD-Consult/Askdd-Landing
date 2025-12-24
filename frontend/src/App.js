@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Navigation } from './components/Navigation';
 import { HeroSection } from './components/HeroSection';
+import { ChatbotAnimationSection } from './components/ChatbotAnimationSection';
 import { ProblemSection } from './components/ProblemSection';
 import { SolutionSection } from './components/SolutionSection';
 import { FeaturesSection } from './components/FeaturesSection';
