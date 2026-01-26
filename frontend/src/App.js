@@ -20,6 +20,7 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSessionModalOpen, setIsSessionModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const handleBookDemo = () => {
@@ -28,6 +29,14 @@ function App() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleBookSession = () => {
+    setIsSessionModalOpen(true);
+  };
+
+  const handleCloseSessionModal = () => {
+    setIsSessionModalOpen(false);
   };
 
   const handleContactUs = () => {
