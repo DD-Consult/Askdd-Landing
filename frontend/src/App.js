@@ -14,6 +14,7 @@ import { FutureFeaturesSection } from './components/FutureFeaturesSection';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 import { BookDemoModal } from './components/BookDemoModal';
+import { BookSessionModal } from './components/BookSessionModal';
 import { ContactModal } from './components/ContactModal';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 
