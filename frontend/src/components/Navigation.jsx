@@ -62,8 +62,11 @@ export const Navigation = ({ onBookDemo, onBookSession }) => {
             <button onClick={() => scrollToSection('footer')} className="nav-link">Contact</button>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <button onClick={onBookSession} className="btn-secondary">
+              Book a Session
+            </button>
             <button onClick={onBookDemo} className="btn-primary">
               Start Your Free Trial
             </button>
