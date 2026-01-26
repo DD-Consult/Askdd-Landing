@@ -50,7 +50,7 @@ function App() {
   // Home page component
   const HomePage = () => (
     <>
-      <Navigation onBookDemo={handleBookDemo} />
+      <Navigation onBookDemo={handleBookDemo} onBookSession={handleBookSession} />
       <HeroSection onBookDemo={handleBookDemo} />
       <ChatbotAnimationSection />
       <ProblemSection />
@@ -63,6 +63,7 @@ function App() {
       <FAQSection onContactUs={handleContactUs} />
       <Footer />
       <BookDemoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <BookSessionModal isOpen={isSessionModalOpen} onClose={handleCloseSessionModal} />
       <ContactModal isOpen={isContactModalOpen} onClose={handleCloseContactModal} />
     </>
   );
