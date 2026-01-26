@@ -90,7 +90,10 @@ export const Navigation = ({ onBookDemo, onBookSession }) => {
             <button onClick={() => scrollToSection('faq')} className="block w-full text-left py-2 nav-link">FAQ</button>
             <Link to="/privacy-policy" className="block w-full text-left py-2 nav-link">Privacy Policy</Link>
             <button onClick={() => scrollToSection('footer')} className="block w-full text-left py-2 nav-link">Contact</button>
-            <button onClick={onBookDemo} className="btn-primary w-full mt-4">
+            <button onClick={onBookSession} className="btn-secondary w-full mt-4">
+              Book a Session
+            </button>
+            <button onClick={onBookDemo} className="btn-primary w-full">
               Start Your Free Trial
             </button>
           </div>
