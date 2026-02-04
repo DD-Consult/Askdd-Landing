@@ -231,7 +231,8 @@ const MultiPlatformAnimation = () => {
         {/* Connecting Lines */}
         <svg className="connection-lines" viewBox="0 0 400 400">
           {platforms.map((_, index) => {
-            const angle = (index * 90 - 90) * (Math.PI / 180);
+            // Position 5 platforms: top, top-right, bottom-right, bottom-left, top-left
+            const angle = (index * 72 - 90) * (Math.PI / 180);
             const startX = 200;
             const startY = 200;
             const endX = 200 + Math.cos(angle) * 120;
