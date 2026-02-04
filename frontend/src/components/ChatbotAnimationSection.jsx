@@ -513,14 +513,13 @@ const styles = `
   position: absolute;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .platform-item {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -529,6 +528,13 @@ const styles = `
   transition: all 0.5s ease;
   opacity: 0.4;
 }
+
+/* Position 5 platforms in a pentagon pattern around center */
+.platform-item:nth-child(1) { top: 5%; left: 50%; transform: translateX(-50%); }
+.platform-item:nth-child(2) { top: 25%; right: 5%; }
+.platform-item:nth-child(3) { bottom: 10%; right: 15%; }
+.platform-item:nth-child(4) { bottom: 10%; left: 15%; }
+.platform-item:nth-child(5) { top: 25%; left: 5%; }
 
 .platform-item.active {
   opacity: 1;
