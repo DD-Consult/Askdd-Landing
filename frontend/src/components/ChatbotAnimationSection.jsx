@@ -713,35 +713,42 @@ const styles = `
   }
 
   .platform-animation {
-    height: 350px;
+    height: 380px;
   }
 
   .agent-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .agent-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .platform-icon-wrapper {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
   }
 
   .platform-emoji {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
-  .platform-grid {
-    padding: 1rem;
-    gap: 1rem;
-  }
+  /* Adjusted mobile positions for 5 platforms */
+  .platform-item:nth-child(1) { top: 2%; left: 50%; transform: translateX(-50%); }
+  .platform-item:nth-child(2) { top: 20%; right: 2%; }
+  .platform-item:nth-child(3) { bottom: 8%; right: 10%; }
+  .platform-item:nth-child(4) { bottom: 8%; left: 10%; }
+  .platform-item:nth-child(5) { top: 20%; left: 2%; }
 
   .platform-messages {
-    min-width: 150px;
+    min-width: 130px;
   }
 
   .platform-msg {
-    font-size: 0.7rem;
-    padding: 0.4rem 0.6rem;
+    font-size: 0.65rem;
+    padding: 0.35rem 0.5rem;
   }
 }
 `;
