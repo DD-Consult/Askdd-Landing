@@ -156,6 +156,7 @@ const MultiPlatformAnimation = () => {
     { name: 'WhatsApp', icon: '💬', color: '#25D366', question: 'What are your hours?', response: 'We\'re available 24/7!' },
     { name: 'Facebook', icon: '👥', color: '#1877F2', question: 'Tell me about pricing', response: 'Let me send you details!' },
     { name: 'Instagram', icon: '📸', color: '#E4405F', question: 'Can you help me?', response: 'Absolutely! What do you need?' },
+    { name: 'LinkedIn', icon: '💼', color: '#0A66C2', question: 'Need B2B info?', response: 'Let me connect you!' },
   ];
 
   useEffect(() => {
