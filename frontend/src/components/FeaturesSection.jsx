@@ -6,7 +6,7 @@ export const FeaturesSection = () => {
     {
       icon: MessageSquare,
       title: 'Multi-Channel Support',
-      description: 'Seamlessly engage customers across your website, WhatsApp, and Facebook Messenger'
+      description: 'Seamlessly engage customers across your website, WhatsApp, Facebook Messenger, Instagram, and LinkedIn'
     },
     {
       icon: FileCheck,

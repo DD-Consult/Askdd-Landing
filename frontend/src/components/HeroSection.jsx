@@ -10,7 +10,7 @@ export const HeroSection = ({ onBookDemo }) => {
         </h1>
         
         <p className="body-large mb-8 max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-          Stop losing leads overnight. Turn your website visitors, WhatsApp, and Facebook messages into qualified, sales-ready leads—automatically.
+          Stop losing leads overnight. Turn your website visitors, WhatsApp, Facebook, Instagram, and LinkedIn messages into qualified, sales-ready leads—automatically.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

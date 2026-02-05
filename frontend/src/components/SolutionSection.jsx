@@ -27,7 +27,7 @@ export const SolutionSection = () => {
             </h2>
             
             <p className="body-large mb-8" style={{ color: 'var(--text-secondary)' }}>
-              Ask DD is your all-in-one AI assistant that works across your website, WhatsApp, and Facebook Messenger to engage, qualify, and convert leads automatically.
+              Ask DD is your all-in-one AI assistant that works across your website, WhatsApp, Facebook Messenger, Instagram, and LinkedIn to engage, qualify, and convert leads automatically.
             </p>
             
             <div className="space-y-4">
