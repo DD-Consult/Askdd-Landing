@@ -31,7 +31,7 @@ export const PricingSection = ({ onBookDemo }) => {
       description: 'Most popular for scaling businesses',
       features: [
         'Everything in Essential, PLUS:',
-        'Multi-Channel (WhatsApp/Messenger)',
+        'Multi-Channel (WhatsApp/Messenger/Instagram/LinkedIn)',
         'AI-Powered Forms',
         'Full Workflow Engine',
         'Client Admin Portal',
