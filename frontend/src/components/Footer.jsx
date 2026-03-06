@@ -17,7 +17,7 @@ export const Footer = () => {
           <div>
             <img 
               src="https://customer-assets.emergentagent.com/job_servai-demo/artifacts/4xi5nw05_Options%205-transparent%20background%20landscape%20copy%20%282%29.png" 
-              alt="DD Consulting" 
+              alt="Ask DD Logo" 
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
             <p className="body-medium" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>

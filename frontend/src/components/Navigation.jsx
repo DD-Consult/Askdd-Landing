@@ -42,7 +42,7 @@ export const Navigation = ({ onBookDemo, onBookSession }) => {
           <div className="flex items-center gap-4">
             <img 
               src="https://customer-assets.emergentagent.com/job_servai-demo/artifacts/4xi5nw05_Options%205-transparent%20background%20landscape%20copy%20%282%29.png" 
-              alt="DD Consulting" 
+              alt="Ask DD - AI Sales Agent Logo" 
               className={`w-auto transition-all duration-300 ${scrolled ? 'h-9' : 'h-12'}`}
             />
             {/* Trust Badge */}
