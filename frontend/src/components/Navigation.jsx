@@ -67,9 +67,9 @@ export const Navigation = ({ onBookDemo, onBookSession }) => {
             <button onClick={onBookSession} className="btn-secondary">
               Book a Session
             </button>
-            <button onClick={onBookDemo} className="btn-primary">
+            <a href="https://console.askdd.net/login" className="btn-primary" rel="noopener noreferrer">
               Start Your Free Trial
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -93,9 +93,9 @@ export const Navigation = ({ onBookDemo, onBookSession }) => {
             <button onClick={onBookSession} className="btn-secondary w-full mt-4">
               Book a Session
             </button>
-            <button onClick={onBookDemo} className="btn-primary w-full">
+            <a href="https://console.askdd.net/login" className="btn-primary w-full text-center block" rel="noopener noreferrer">
               Start Your Free Trial
-            </button>
+            </a>
           </div>
         )}
       </div>

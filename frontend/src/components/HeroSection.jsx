@@ -14,10 +14,10 @@ export const HeroSection = ({ onBookDemo }) => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <button onClick={onBookDemo} className="btn-primary">
+          <a href="https://console.askdd.net/login" className="btn-primary" rel="noopener noreferrer">
             Start Your Free Trial
             <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
         
         <p className="body-small" style={{ color: 'var(--text-muted)' }}>

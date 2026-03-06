@@ -108,12 +108,22 @@ export const PricingSection = ({ onBookDemo }) => {
                 </div>
               </div>
               
-              <button 
-                onClick={onBookDemo}
-                className={plan.popular ? 'btn-primary w-full mb-6' : 'btn-secondary w-full mb-6'}
-              >
-                {plan.cta}
-              </button>
+              {plan.cta === 'Contact Sales' ? (
+                <button 
+                  onClick={onBookDemo}
+                  className={plan.popular ? 'btn-primary w-full mb-6' : 'btn-secondary w-full mb-6'}
+                >
+                  {plan.cta}
+                </button>
+              ) : (
+                <a 
+                  href="https://console.askdd.net/login"
+                  className={plan.popular ? 'btn-primary w-full mb-6' : 'btn-secondary w-full mb-6'}
+                  rel="noopener noreferrer"
+                >
+                  {plan.cta}
+                </a>
+              )}
               
               <div className="space-y-3">
                 {plan.features.map((feature, idx) => (

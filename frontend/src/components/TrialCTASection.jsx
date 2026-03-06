@@ -14,10 +14,10 @@ export const TrialCTASection = ({ onBookDemo }) => {
               Get 30 days of full access to our most popular plan, including the AI Assessment and Automated Proposal Generator. No risk, no credit card required.
             </p>
             
-            <button onClick={onBookDemo} className="btn-cta-white">
+            <a href="https://console.askdd.net/login" className="btn-cta-white" rel="noopener noreferrer">
               Start Your Free Trial
               <ArrowRight size={20} />
-            </button>
+            </a>
             
             <div className="flex items-center justify-center gap-6 mt-8 flex-wrap">
               <div className="flex items-center gap-2">
