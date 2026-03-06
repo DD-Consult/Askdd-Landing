@@ -241,6 +241,18 @@ frontend:
           agent: "main"
           comment: "Added a message in the Pricing section about discounts and potential free tiers for specific use cases. Includes a 'Contact us' link that opens the contact modal."
 
+  - task: "Custom Solutions Section & CRM Feature"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/CustomSolutionsSection.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Added Custom Solutions section highlighting 4 use cases (SaaS Onboarding, Mobile App, Multi-Language, Custom Quoting). Also added 'Seamless CRM Integration' to the Features section."
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
@@ -267,3 +279,5 @@ agent_communication:
       message: "Updated all 'Start Free Trial' and 'Get Started' CTA buttons to direct users to 'https://console.askdd.net/login'. Affected components: Navigation.jsx, HeroSection.jsx, TrialCTASection.jsx, and PricingSection.jsx. 'Contact Sales' button in PricingSection still opens the contact modal."
     - agent: "main"
       message: "Added information about discounts and potential free tiers in the Pricing section. The message includes a 'Contact us' link that opens the contact modal, allowing users to inquire about special rates."
+    - agent: "main"
+      message: "Implemented 'Custom Solutions' section with 4 specific use cases and a contact CTA. Added 'Seamless CRM Integration' (HubSpot/Salesforce) to the Features list. Updated App.js to include the new section."

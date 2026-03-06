@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, FileCheck, Workflow, Wrench, BarChart3, Settings } from 'lucide-react';
+import { MessageSquare, FileCheck, Workflow, Wrench, BarChart3, Settings, Database } from 'lucide-react';
 
 export const FeaturesSection = () => {
   const features = [
@@ -7,6 +7,11 @@ export const FeaturesSection = () => {
       icon: MessageSquare,
       title: 'Multi-Channel Support',
       description: 'Seamlessly engage customers across your website, WhatsApp, Facebook Messenger, Instagram, and LinkedIn'
+    },
+    {
+      icon: Database,
+      title: 'Seamless CRM Integration',
+      description: 'Automatically sync leads and conversation data directly to HubSpot, Salesforce, and other major CRMs.'
     },
     {
       icon: FileCheck,

@@ -7,6 +7,7 @@ import { ChatbotAnimationSection } from './components/ChatbotAnimationSection';
 import { ProblemSection } from './components/ProblemSection';
 import { SolutionSection } from './components/SolutionSection';
 import { FeaturesSection } from './components/FeaturesSection';
+import { CustomSolutionsSection } from './components/CustomSolutionsSection';
 import { CaseStudiesSection } from './components/CaseStudiesSection';
 import { PricingSection } from './components/PricingSection';
 import { TrialCTASection } from './components/TrialCTASection';
@@ -56,6 +57,7 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <FeaturesSection />
+      <CustomSolutionsSection onContactUs={handleContactUs} />
       <CaseStudiesSection />
       <PricingSection onBookDemo={handleBookDemo} onContactUs={handleContactUs} />
       <TrialCTASection onBookDemo={handleBookDemo} />
