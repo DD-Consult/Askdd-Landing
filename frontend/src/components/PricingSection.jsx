@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Check, Star, Info } from 'lucide-react';
 import { PricingComparisonModal } from './PricingComparisonModal';
 
-export const PricingSection = ({ onBookDemo }) => {
+export const PricingSection = ({ onBookDemo, onContactUs }) => {
   const [showComparison, setShowComparison] = useState(false);
 
   const plans = [
@@ -150,11 +150,24 @@ export const PricingSection = ({ onBookDemo }) => {
         <div className="text-center">
           <button 
             onClick={() => setShowComparison(true)}
-            className="btn-secondary inline-flex items-center gap-2"
+            className="btn-secondary inline-flex items-center gap-2 mb-8"
           >
             <Info size={18} />
             View Detailed Comparison
           </button>
+          
+          <div className="mt-8 pt-8 border-t border-[var(--border-light)]">
+            <p className="body-medium" style={{ color: 'var(--text-secondary)' }}>
+              Looking for a custom plan? We provide discounts and potential free tiers for specific use cases. <br className="hidden sm:block" />
+              <button 
+                onClick={onContactUs}
+                className="text-[var(--accent-primary)] font-semibold hover:underline ml-1 bg-transparent border-none cursor-pointer p-0"
+              >
+                Contact us
+              </button>
+              {' '}to learn more.
+            </p>
+          </div>
         </div>
       </div>
 

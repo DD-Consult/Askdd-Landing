@@ -229,8 +229,20 @@ frontend:
           agent: "main"
           comment: "Updated all 'Start Free Trial' and 'Get Started' links to point to 'https://console.askdd.net/login'. Modified Navigation (desktop/mobile), HeroSection, TrialCTASection, and PricingSection. 'Contact Sales' button remains unchanged (opens modal)."
 
+  - task: "Discount & Free Tier Messaging"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/PricingSection.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Added a message in the Pricing section about discounts and potential free tiers for specific use cases. Includes a 'Contact us' link that opens the contact modal."
+
 metadata:
-  created_by: "testing_agent"
+  created_by: "main_agent"
   version: "1.0"
   test_sequence: 1
   run_ui: false
@@ -253,3 +265,5 @@ agent_communication:
       message: "ENHANCEMENT: Updated Multi-Platform Animation to show customer interactions on each platform. When Website/WhatsApp/Facebook/Instagram becomes active (every 3 seconds), chat bubbles appear showing: customer question (blue bubble) + Ask DD response (white bubble). Each platform has unique conversation to demonstrate versatility. Example conversations: Website 'Hi, need help!' → 'Hello! I can help you.', WhatsApp 'What are your hours?' → 'We're available 24/7!', Facebook 'Tell me about pricing' → 'Let me send you details!', Instagram 'Can you help me?' → 'Absolutely! What do you need?'. Messages animate in with smooth pop effect. This clearly demonstrates that customers can reach out from ANY platform and Ask DD responds everywhere. Verified on both desktop and mobile - messages scale appropriately and remain readable."
     - agent: "main"
       message: "Updated all 'Start Free Trial' and 'Get Started' CTA buttons to direct users to 'https://console.askdd.net/login'. Affected components: Navigation.jsx, HeroSection.jsx, TrialCTASection.jsx, and PricingSection.jsx. 'Contact Sales' button in PricingSection still opens the contact modal."
+    - agent: "main"
+      message: "Added information about discounts and potential free tiers in the Pricing section. The message includes a 'Contact us' link that opens the contact modal, allowing users to inquire about special rates."

@@ -57,7 +57,7 @@ function App() {
       <SolutionSection />
       <FeaturesSection />
       <CaseStudiesSection />
-      <PricingSection onBookDemo={handleBookDemo} />
+      <PricingSection onBookDemo={handleBookDemo} onContactUs={handleContactUs} />
       <TrialCTASection onBookDemo={handleBookDemo} />
       <FutureFeaturesSection />
       <FAQSection onContactUs={handleContactUs} />
